@@ -146,7 +146,36 @@ End teaser video -->
   </div>
 </section>
 <!-- End paper abstract -->
+  
+<br>
+<img src="./static/images/example_cc_fs.png" class="is-centered">
 
+<br>
+<br>
+<div class="columns is-centered">
+  <div class="column is-three-fifths">
+    <h2 class="title is-3">Main Results</h2>
+      <hr>
+      <div class="content has-text-justified">
+        <p>
+          1. <b> Not all minimizers of the SCL loss exhibit CC, but the minimum norm minimizer does.</b> The key insight is that due to high dimensionality of the model, it has the capacity to minimize the training loss in various ways. While minimizing the training loss implies CC on the training data, it does not necessarily imply CC on the test data. The first figure provides a simplified example illustrating a model that exhibits CC on the training data but not on the test data. This occurs because the model can exploit the specific input noise present in the training data to counteract the subclass information in the embeddings, while this input noise is rarely encountered in the overall distribution due to high dimensionality. The second figure illustrates that the minimum norm minimizer does not align with the subclass feature at all.
+        </p>
+        <img src="./static/images/not_all.png" class="is-centered">
+        <br>
+        <img src="./static/images/min_norm.png" class="is-centered">
+        <p>
+          2. <b> In SCL, subclasses are learned by (S)GD early in training but unlearned later.</b> The first part is supported by both theoretical and empirical results and the second part is supported by empirical results. The theoretical characterization of the unlearning process remains an important direction for future research. This observation, in conjunction with the previous point (1), prompts us to conjecture that <b>the bias of (S)GD towards simpler solutions, such as the minimum norm solution, leads to the unlearning of subclasses and ultimately results in class collapse (CC).</b>
+        </p>
+        <img src="./static/images/cc_gd.png" class="is-centered">
+        <p>
+          3. In UCL, with the min norm inductive bias, we characeterize two scenarios where FS can happen. (a) When there are easy and irrelevant features present, and the embedding size is limited, the model is unable to accommodate all the information from the input space into the embeddings. As a result, it selectively captures only the easiest features, disregarding the harder class-relevant ones. This suggests increasing embedding size as a solution which we validated through experiments. (b) Even with arbitrarily large embedding sizes, FS can still occur in the presence of high-dimensional irrelevant features and the use of imperfect data augmentation that preserves those features. This emphasizes the importance of designing better data augmentation strategy. 
+        </p>
+        <p>
+          4. We also theotretically justify using a weighted sum of SCL and UCL losses, showing that it can provably avoid both CC and FS. This result sheds light on the empirical observation of improved performance when joint loss is used. 
+        </p>
+      </div>
+  </div>
+</div>
 
 <!-- Image carousel 
 <section class="hero is-small">
