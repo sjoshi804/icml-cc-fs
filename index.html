@@ -153,6 +153,7 @@ End teaser video -->
 <div class="columns is-centered">
   <div class="column is-three-fifths">
     <h2 class="title is-3">Main Results</h2>
+    <h3 class="title is-4">Class Collapse</h3>
       <hr>
       <div class="content has-text-justified">
         <p>
@@ -165,11 +166,15 @@ End teaser video -->
           2. <b> In SCL, subclasses are learned by (S)GD early in training but unlearned later.</b> The first part is supported by both theoretical and empirical results and the second part is supported by empirical results. The theoretical characterization of the unlearning process remains an important direction for future research. This observation, in conjunction with the previous point (1), prompts us to conjecture that <b>the bias of (S)GD towards simpler solutions, such as the minimum norm solution, leads to the unlearning of subclasses and ultimately results in class collapse (CC).</b>
         </p>
         <img src="./static/images/cc_gd.png" class="is-centered">
+      <h3 class="title is-4">Feature Suppresion</h3>
+      <hr>
         <p>
-          3. In UCL, with the min norm inductive bias, we characeterize two scenarios where FS can happen. (a) When there are easy and irrelevant features present, and the embedding size is limited, the model is unable to accommodate all the information from the input space into the embeddings. As a result, it selectively captures only the easiest features, disregarding the harder class-relevant ones. This suggests increasing embedding size as a solution which we validated through experiments. (b) Even with arbitrarily large embedding sizes, FS can still occur in the presence of high-dimensional irrelevant features and the use of imperfect data augmentation that preserves those features. This emphasizes the importance of designing better data augmentation strategy. 
+          In UCL, with the min norm inductive bias, we characeterize two scenarios where FS can happen. (a) When there are easy and irrelevant features present, and the embedding size is limited, the model is unable to accommodate all the information from the input space into the embeddings. As a result, it selectively captures only the easiest features, disregarding the harder class-relevant ones. This suggests increasing embedding size as a solution which we validated through experiments. (b) Even with arbitrarily large embedding sizes, FS can still occur in the presence of high-dimensional irrelevant features and the use of imperfect data augmentation that preserves those features. This emphasizes the importance of designing better data augmentation strategy. 
         </p>
+      <h3 class="title is-4">Joint Loss</h3>
+      <hr>
         <p>
-          4. We also theotretically justify using a weighted sum of SCL and UCL losses, showing that it can provably avoid both CC and FS. This result sheds light on the empirical observation of improved performance when joint loss is used. 
+          We also theotretically justify using a weighted sum of SCL and UCL losses, showing that it can provably avoid both CC and FS. This result sheds light on the empirical observation of improved performance when joint loss is used. 
         </p>
       </div>
   </div>
