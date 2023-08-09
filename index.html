@@ -74,7 +74,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/abs/2305.16536" target="_blank"
+                        <a href="https://proceedings.mlr.press/v202/xue23d.html" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -221,12 +221,23 @@ End youtube video -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{xue2023features,
-  title={Which Features are Learnt by Contrastive Learning? On the Role of Simplicity Bias in Class Collapse and Feature Suppression},
-  author={Xue, Yihao and Joshi, Siddharth and Gan, Eric and Chen, Pin-Yu and Mirzasoleiman, Baharan},
-  journal={arXiv preprint arXiv:2305.16536},
-  year={2023}
-}
+      <pre><code>
+        @InProceedings{pmlr-v202-xue23d,
+          title = 	 {Which Features are Learnt by Contrastive Learning? {O}n the Role of Simplicity Bias in Class Collapse and Feature Suppression},
+          author =       {Xue, Yihao and Joshi, Siddharth and Gan, Eric and Chen, Pin-Yu and Mirzasoleiman, Baharan},
+          booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+          pages = 	 {38938--38970},
+          year = 	 {2023},
+          editor = 	 {Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, Sivan and Scarlett, Jonathan},
+          volume = 	 {202},
+          series = 	 {Proceedings of Machine Learning Research},
+          month = 	 {23--29 Jul},
+          publisher =    {PMLR},
+          pdf = 	 {https://proceedings.mlr.press/v202/xue23d/xue23d.pdf},
+          url = 	 {https://proceedings.mlr.press/v202/xue23d.html},
+          abstract = 	 {Contrastive learning (CL) has emerged as a powerful technique for representation learning, with or without label supervision. However, supervised CL is prone to collapsing representations of subclasses within a class by not capturing all their features, and unsupervised CL may suppress harder class-relevant features by focusing on learning easy class-irrelevant features; both significantly compromise representation quality. Yet, there is no theoretical understanding of <em>class collapse</em> or <em>feature suppression</em> at <em>test</em> time. We provide the first unified theoretically rigorous framework to determine <em>which</em> features are learnt by CL. Our analysis indicate that, perhaps surprisingly, bias of (stochastic) gradient descent towards finding simpler solutions is a key factor in collapsing subclass representations and suppressing harder class-relevant features. Moreover, we present increasing embedding dimensionality and improving the quality of data augmentations as two theoretically motivated solutions to feature suppression. We also provide the first theoretical explanation for why employing supervised and unsupervised CL together yields higher-quality representations, even when using commonly-used stochastic gradient methods.}
+        }
+        
       </code></pre>
     </div>
 </section>
